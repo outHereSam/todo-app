@@ -1,13 +1,41 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --primary-blue: hsl(220, 98%, 61%);
+  --check-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+  /* Light Theme */
+  --light-bg: hsl(0, 0%, 98%);
+  --light-text-completed: hsl(236, 33%, 92%);
+  --light-text-secondary: hsl(233, 11%, 84%);
+  --light-gray-line: hsl(236, 9%, 61%);
+  --light-text-main: hsl(235, 19%, 35%);
+
+  /* Dark Theme */
+  --dark-bg: hsl(235, 21%, 11%);
+  --dark-card-bg: hsl(235, 24%, 19%);
+  --dark-text-secondary: hsl(234, 39%, 85%);
+  --dark-text-hover: hsl(236, 33%, 92%);
+  --dark-gray-line: hsl(234, 11%, 52%);
+  --dark-text-main: hsl(233, 14%, 35%);
+  --dark-text-secondary: hsl(237, 14%, 26%);
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 540px;
+  margin: 0 auto;
 }
