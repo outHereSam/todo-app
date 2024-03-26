@@ -1,4 +1,6 @@
+import "./Todo.css";
 import CrossIcon from "../Icons/CrossIcon";
+import CheckIcon from "../Icons/CheckIcon";
 
 interface TodoItemType {
   id: number;
@@ -9,12 +11,17 @@ interface TodoItemType {
 const Todo: React.FC<{
   todo: TodoItemType;
   deleteTodo: (id: number) => void;
-}> = ({ todo, deleteTodo }) => {
+  toggleTodo: (id: number) => void;
+}> = ({ todo, deleteTodo, toggleTodo }) => {
   return (
     <div key={todo.id} className="todo">
       <div className="left">
-        <span className="circle"></span>
-        {todo.todo}
+        <button onClick={() => toggleTodo(todo.id)}>
+          <span className={`${todo.completed ? "completed" : "circle"}`}>
+            {todo.completed ? <CheckIcon /> : ""}
+          </span>
+        </button>
+        <p className={`${todo.completed ? "done" : ""}`}>{todo.todo}</p>
       </div>
       <button className="delete" onClick={() => deleteTodo(todo.id)}>
         <CrossIcon />

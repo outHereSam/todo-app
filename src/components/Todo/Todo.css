@@ -1,0 +1,18 @@
+.completed {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+p.done {
+  text-decoration: line-through;
+}

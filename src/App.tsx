@@ -26,6 +26,14 @@ function App() {
     setTodos((todos) => todos.filter((todoItem) => todoItem.id !== id));
   };
 
+  const toggleTodo = (id: number) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
   console.log(todos);
 
   return (
@@ -34,7 +42,11 @@ function App() {
         <Header />
         <div className="container main-content">
           <TextBox addTodoItem={addTodo} />
-          <TodoItems todoItems={todos} deleteTodo={deleteTodo} />
+          <TodoItems
+            todoItems={todos}
+            deleteTodo={deleteTodo}
+            toggleTodo={toggleTodo}
+          />
         </div>
       </Wrapper>
     </ThemeProvider>

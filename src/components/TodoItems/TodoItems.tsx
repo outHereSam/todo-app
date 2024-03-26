@@ -12,20 +12,32 @@ interface TodoItemType {
 const TodoItems: React.FC<{
   todoItems: TodoItemType[];
   deleteTodo: (id: number) => void;
-}> = ({ todoItems, deleteTodo }) => {
+  toggleTodo: (id: number) => void;
+}> = ({ todoItems, deleteTodo, toggleTodo }) => {
   const { theme } = useTheme();
   return (
     <>
       <div className={`todoItems-${theme}`}>
         {todoItems.length > 0 ? (
           todoItems.map((todo) => (
-            <Todo key={todo.id} todo={todo} deleteTodo={deleteTodo} />
+            <Todo
+              key={todo.id}
+              todo={todo}
+              deleteTodo={deleteTodo}
+              toggleTodo={toggleTodo}
+            />
           ))
         ) : (
           <div></div>
         )}
         <div className="stats">
-          <p>5 items left</p>
+          <p>
+            {todoItems.filter((todo) => todo.completed === false).length}{" "}
+            {todoItems.filter((todo) => todo.completed === false).length > 1
+              ? "items "
+              : "item "}
+            left
+          </p>
           <button className="clear">Clear Completed</button>
         </div>
       </div>
