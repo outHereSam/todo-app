@@ -12,7 +12,7 @@ header {
   background-image: url("../../assets/bg-mobile-dark.jpg");
 }
 
-header .container {
+.header-container {
   padding: 40px 24px;
   display: flex;
   align-items: center;

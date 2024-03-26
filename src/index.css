@@ -7,8 +7,8 @@
   /* Light Theme */
   --light-bg: hsl(0, 0%, 98%);
   --light-text-completed: hsl(236, 33%, 92%);
-  --light-text-secondary: hsl(233, 11%, 84%);
-  --light-gray-line: hsl(236, 9%, 61%);
+  --light-text-secondary: hsl(236, 9%, 61%);
+  --light-gray-line: hsl(233, 11%, 84%);
   --light-text-main: hsl(235, 19%, 35%);
 
   /* Dark Theme */
@@ -33,9 +33,16 @@ body {
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+input,
+button {
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .container {
   max-width: 540px;
   margin: 0 auto;
+  padding: 0px 24px;
 }

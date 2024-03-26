@@ -1,0 +1,148 @@
+.todoItems-light,
+.todoItems-dark {
+  margin: 24px 0;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+}
+
+.todoItems-light {
+  color: var(--light-text-main);
+}
+
+.todoItems-dark .todo,
+.todoItems-dark .stats {
+  background-color: var(--dark-card-bg);
+  border-bottom: solid 1px var(--dark-text-secondary);
+  color: var(--light-gray-line);
+}
+
+.todo {
+  background-color: white;
+  padding: 20px;
+  border-bottom: solid 1px var(--light-text-completed);
+  color: var(--light-text-main);
+  cursor: pointer;
+  transition: color 0.3s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo .left {
+  display: flex;
+  align-items: center;
+}
+
+.delete {
+  display: none;
+  appearance: none;
+  background: none;
+  border: none;
+}
+
+.todo:hover .delete {
+  display: block;
+}
+
+/* .todo:hover .circle {
+  
+} */
+
+.todo:nth-child(1) {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.todoItems-dark .stats {
+  border-bottom: none;
+}
+.stats {
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--light-text-secondary);
+  border-bottom: none;
+}
+
+.stats button {
+  color: var(--light-text-secondary);
+  cursor: pointer;
+}
+
+.options-light,
+.options-dark {
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 24px;
+  padding: 20px;
+  color: var(--light-text-secondary);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+}
+
+.options-light {
+  background-color: white;
+}
+
+.options-dark {
+  background-color: var(--dark-card-bg);
+}
+
+.options-dark button {
+  color: var(--light-gray-line);
+}
+
+.options-light button,
+.options-dark button {
+  font-weight: 700;
+  color: var(--light-text-secondary);
+  transition: color 0.2s ease-in;
+}
+
+.options-light button.selected,
+.options-dark button.selected {
+  color: var(--primary-blue);
+}
+
+.options-light button:hover {
+  color: var(--light-text-main);
+}
+
+.options-dark button:hover {
+  color: var(--dark-text-hover);
+}
+
+.todoItems-light .circle,
+.todoItems-dark .circle {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 15px 0 0;
+  transition: border 0.2s ease-in;
+}
+
+.todoItems-light .circle {
+  border: solid 1px var(--light-gray-line);
+}
+
+.todoItems-dark .circle {
+  border: solid 1px var(--dark-text-secondary);
+}
+
+.tip-light,
+.tip-dark {
+  font-size: 14px;
+  text-align: center;
+  margin: 50px 0 0 0;
+}
+
+.tip-light {
+  color: var(--light-text-secondary);
+}
+
+.tip-dark {
+  color: var(--dark-gray-line);
+}

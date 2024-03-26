@@ -1,0 +1,26 @@
+.textbox-light,
+.textbox-dark {
+  width: 100%;
+  border: none;
+  padding: 18px 20px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--light-text-main);
+}
+
+.textbox-light::placeholder {
+  font-size: 14px;
+  color: var(--light-text-secondary);
+}
+
+.textbox-dark::placeholder {
+  font-size: 14px;
+  color: var(--dark-text-secondary);
+}
+
+.textbox-dark {
+  background-color: var(--dark-card-bg);
+  color: var(--light-text-secondary);
+}

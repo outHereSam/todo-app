@@ -6,7 +6,7 @@ const Header = () => {
   const { theme } = useTheme();
   return (
     <header className={`header-${theme}`}>
-      <div className="container">
+      <div className="header-container">
         <h1 className="logo">Todo</h1>
         <ThemeSwitcher />
       </div>
