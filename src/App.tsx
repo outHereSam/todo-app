@@ -52,6 +52,7 @@ function App() {
         <Header />
         <div className="container main-content">
           <TextBox addTodoItem={addTodo} />
+
           <TodoItems
             todoItems={todos}
             deleteTodo={deleteTodo}
