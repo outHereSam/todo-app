@@ -89,7 +89,7 @@ const TodoItems: React.FC<{
         <button>Completed</button> */}
       </div>
 
-      <p className={`tip-${theme}`}>Drag and drop to reorder list</p>
+      {/* <p className={`tip-${theme}`}>Drag and drop to reorder list</p> */}
     </>
   );
 };
