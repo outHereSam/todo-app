@@ -65,9 +65,22 @@
   border-bottom: none;
 }
 
+.stats.dark p {
+  color: var(--light-text-secondary);
+}
+
 .stats button {
   color: var(--light-text-secondary);
   cursor: pointer;
+  transition: color 0.2s ease-in;
+}
+
+.stats.dark button:hover {
+  color: var(--dark-text-hover);
+}
+
+.stats.light button:hover {
+  color: var(--light-text-main);
 }
 
 .options-light,

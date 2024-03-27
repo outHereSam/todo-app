@@ -34,6 +34,10 @@ function App() {
     );
   };
 
+  const clearCompleted = () => {
+    setTodos((todos) => todos.filter((todo) => todo.completed === false));
+  };
+
   console.log(todos);
 
   return (
@@ -46,6 +50,7 @@ function App() {
             todoItems={todos}
             deleteTodo={deleteTodo}
             toggleTodo={toggleTodo}
+            clearCompleted={clearCompleted}
           />
         </div>
       </Wrapper>

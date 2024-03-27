@@ -13,7 +13,8 @@ const TodoItems: React.FC<{
   todoItems: TodoItemType[];
   deleteTodo: (id: number) => void;
   toggleTodo: (id: number) => void;
-}> = ({ todoItems, deleteTodo, toggleTodo }) => {
+  clearCompleted: () => void;
+}> = ({ todoItems, deleteTodo, toggleTodo, clearCompleted }) => {
   const { theme } = useTheme();
   return (
     <>
@@ -30,7 +31,7 @@ const TodoItems: React.FC<{
         ) : (
           <div></div>
         )}
-        <div className="stats">
+        <div className={`stats ${theme}`}>
           <p>
             {todoItems.filter((todo) => todo.completed === false).length}{" "}
             {todoItems.filter((todo) => todo.completed === false).length > 1
@@ -38,7 +39,9 @@ const TodoItems: React.FC<{
               : "item "}
             left
           </p>
-          <button className="clear">Clear Completed</button>
+          <button className="clear" onClick={clearCompleted}>
+            Clear Completed
+          </button>
         </div>
       </div>
       <div className={`options-${theme}`}>

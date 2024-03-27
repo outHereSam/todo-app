@@ -15,4 +15,5 @@
 
 p.done {
   text-decoration: line-through;
+  color: var(--dark-gray-line);
 }
