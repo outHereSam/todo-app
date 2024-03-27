@@ -9,7 +9,7 @@ const TextBox: React.FC<{ addTodoItem: (item: string) => void }> = ({
   const { theme } = useTheme();
 
   const handleKeyPress = (e: any) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && todo) {
       addTodoItem(todo);
       setTodo("");
     }
