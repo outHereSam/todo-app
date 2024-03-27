@@ -14,6 +14,7 @@ interface TodoItemType {
 
 function App() {
   const [todos, setTodos] = useState<TodoItemType[]>([]);
+  const [filter, setFilter] = useState("All");
 
   const addTodo = (todoText: string) => {
     setTodos((prevTodos) => [
@@ -38,7 +39,12 @@ function App() {
     setTodos((todos) => todos.filter((todo) => todo.completed === false));
   };
 
-  console.log(todos);
+  const changeFilter = (filter: string) => {
+    setFilter(filter);
+  };
+
+  // console.log(todos);
+  // console.log(filter);
 
   return (
     <ThemeProvider>
@@ -51,6 +57,8 @@ function App() {
             deleteTodo={deleteTodo}
             toggleTodo={toggleTodo}
             clearCompleted={clearCompleted}
+            filter={filter}
+            changeFilter={changeFilter}
           />
         </div>
       </Wrapper>
